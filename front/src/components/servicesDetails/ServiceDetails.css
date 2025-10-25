@@ -1,0 +1,132 @@
+.service_details_sect {
+    width: 100%;
+    height: calc( 100vh - 80px) !important;
+}
+
+.service_details_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.service_details_item {
+    display: flex;
+    gap: 40px;
+}
+
+.service_details_item img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.service_details_context {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service_details_item h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Oswald", sans-serif;
+}
+
+.service_details_item p {
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 20px;
+    width: 300px;
+}
+
+.service_details_item h5 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.service_details_item h5 span {
+    color: #686868;
+    font-weight: 300;
+}
+
+.service_details_item button {
+    padding: 13px 0;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: #3d3f4c;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.service_btn_link {
+    color: #fff !important;
+}
+
+.service_details_item button:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+@media (min-width: 480px) {
+
+    .service_details_sect {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .service_details_item {
+        display: flex;
+        flex-direction: column;  
+    }
+
+    .service_details_item img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (min-width: 768px) {
+    .service_details_item img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .service_details_item {
+        display: flex;
+        flex-direction: row;  
+        align-items: center;
+    }
+}
+
+@media (min-width: 1280px) {
+    .service_details_item img {
+        width: 450px;
+        height: 450px;
+    }
+
+    .service_details_context h1 {
+        font-size: 1.8rem;
+    }
+    
+}
+
+@media (min-width: 1536px) {
+    .service_details_sect {
+        height: calc(80vh - 80px);
+    }
+
+    .service_details_item img {
+        width: 500px;
+        height: 500px;
+    }
+
+    .service_details_context p {
+        font-size: 1.3rem;
+    }
+}

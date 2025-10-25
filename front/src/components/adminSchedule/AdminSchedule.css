@@ -1,0 +1,46 @@
+.admin-schedule-container {
+    display: flex;
+}
+
+.admin-schedule-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.admin-schedule-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-schedule-content th,
+.admin-schedule-content td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.admin-schedule-content th {
+    background-color: #f2f2f2;
+}
+.admin-schedule-container {
+    display: flex;
+}
+
+.admin-schedule-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.admin-schedule-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-schedule-content th,
+.admin-schedule-content td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.admin-schedule-content th {
+    background-color: #f2f2f2;
+}

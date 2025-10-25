@@ -1,0 +1,301 @@
+.appointment_sect {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+
+.appointment_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.appointment_form {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.appointment_container h2 {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: "Oswald", sans-serif;
+}
+
+.appointment_item {
+    width: 450px;
+    padding: 20px 0;
+    border: 1px solid #b5b5b5;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-left: 20px;
+}
+
+.appointment_item:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.appointment_item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.appointment_item.active {
+    border: 2px solid #00cc66;
+    background-color: rgba(0, 204, 102, 0.05);
+}
+
+.appointment_item.active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 204, 102, 0.15);
+}
+
+.service_selection {
+    height: 780px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.appointment_form input {
+    width: 450px;
+    height: auto;
+    padding: 13px 20px;
+    outline: none;
+    margin: 10px;
+}
+
+.doctor_input {
+    width: 450px;
+    height: auto;
+    padding: 13px 20px;
+    outline: none;
+    margin: 10px;
+    border: 1px solid #000;
+}
+
+.inputes-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-div {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+
+.appointment_form_button {
+    width: 200px;
+    padding: 13px 0;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #40546d;
+    border-radius: 20px;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button_loadin_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appointment_form_button:hover {
+    background-color: #273341;
+}
+
+.appointment_sect {
+    position: relative;
+}
+
+.message_container {
+    position: fixed;
+    z-index: 999;
+    top: 20px;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+    height: 60px;
+    text-transform: capitalize;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.message_container:hover {
+    box-shadow: 0px 0px 25px  rgba(0, 0, 0, 0.3);
+    
+}
+
+.message_container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    background: green;
+    width: 100%;
+    animation: progressBar 5s linear forwards;
+}
+
+.time_slot_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.time_slot {
+    width: 200px;
+    padding: 13px 0;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #40546d;
+    border-radius: 20px;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.time_slot.active {
+    background: #4caf50;
+}
+
+.time_slot.booked {
+    background: #ddd;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.time_slot:hover {
+    background-color: #37475a;
+}
+
+@keyframes progressBar {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+}
+
+
+
+@media (min-width: 480px) {
+
+    .appointment_sect {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .inputes-div {
+        display: flex;
+        justify-content: center; 
+        margin-bottom: 50px;   
+    }
+
+    .inputes-div > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service_selection {
+        display: grid;
+        height: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .appointment_form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .appointment_form input, .doctor_input {
+        width: 500px ;
+    }
+
+    .appointment_form {
+        width: 500px;
+    }
+
+    .appointment_item {
+        width: 500px;
+    }
+
+    .time_slot_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .service_selection {
+        display: grid;
+        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .inputes-div > div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .appointment_form input, .doctor_input {
+        width: 450px;
+    }
+
+    .appointment_item {
+        width: 450px;
+    }
+    
+}

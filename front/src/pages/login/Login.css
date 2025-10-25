@@ -1,0 +1,181 @@
+.user_signin_sect {
+    width: 100%;
+    height: calc(100vh - 80px);
+}
+
+.signin_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.signin_container > div:nth-child(1)  {
+    width: 250px;
+    height: 350px;
+    border-radius: 30px 80px 80px 30px ;
+}
+
+.signin_container > div:nth-child(2)  {
+    width: 300px;
+    height: 350px;
+}
+
+.signin_cotext_side {
+    background-color: #40546d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.signin_cotext_side_title h3 {
+    color: #fff;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.signin_cotext_side_paragraph p {
+    color: #fff;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.signin_cotext_side_button button {
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.signin_cotext_side_button button:hover {
+    background-color: #fff;
+    color: #40546d;
+}
+
+.signin_form_side form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.signin_form_title h1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.signin_form_input_div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.signin_form_input_div > div {
+    width: 80%;
+    background-color: #ededed;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.signin_form_input_div input {
+    width: 80%;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: transparent;
+    width: 100%;
+    padding: 2px 0;
+}
+
+.signin_form_foergot_password {
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+    cursor: pointer;
+}
+
+.signin_form_login_button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.signin_form_login_button button {
+    background-color: #40546d;
+    color: #fff;
+    padding: 10px 0;
+    width: 80%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.signin_form_login_button button:hover {
+    background-color: #263342;
+}
+
+.login_with_social p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+}
+
+html[lang="ge"] .login_with_social p  {
+    font-size: 0.75rem; 
+    width: 200px;
+    text-align: center;
+}
+
+.signin_form_social_button {
+    display: flex;
+    gap: 10px;
+}
+
+.signin_form_social_button button {
+    background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+
+@media (min-width: 480px) {
+    .signin_container > div:nth-child(1)  {
+        width: 200px;
+        height: 350px;
+        border-radius: 30px 80px 80px 30px ;
+    }
+
+    .signin_container > div:nth-child(2)  {
+        width: 250px;
+        height: 350px;
+    }
+}
+
+@media (min-width: 768px) {
+    .signin_container > div:nth-child(1)  {
+        width: 250px;
+        height: 350px;
+        border-radius: 30px 80px 80px 30px ;
+    }
+
+    .signin_container > div:nth-child(2)  {
+        width: 300px;
+        height: 350px;
+    }
+}

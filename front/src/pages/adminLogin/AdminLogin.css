@@ -1,0 +1,41 @@
+.admin_login_section {
+    width: 100%;
+    height: calc( 100vh - 80px );
+}
+
+.admin_login_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.admin_login_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.admin_login_form input {
+    border: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: #ededed;
+    width: 100%;
+    padding: 10px 0;
+    width: 300px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.admin_login_form button {
+    background-color: #40546d;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}

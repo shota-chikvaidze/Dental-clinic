@@ -1,0 +1,774 @@
+.slider_wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider_container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider_track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.slider_item {
+    flex: 0 0 100%;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.slider_content {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 200px;
+    color: #fff;
+    font-weight: 600;
+    width: 60%;
+    text-align: start;
+}
+
+.slider_content h3 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: "Oswald", sans-serif;
+}
+
+.slider_content h5 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.slider_content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.slider_content button {
+    background-color: transparent;
+    border: 1px solid #fff ;
+    color: #fff;
+    padding: 14px 40px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.slider_content button:hover {
+    background-color: #2f313c;
+    border: 1px solid #2f313c !important;
+}
+
+.slider_item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider_item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 2;
+}
+
+.slider_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    position: relative;
+    z-index: 1;
+}
+
+.slider_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    color: white !important;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider_btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.slider_btn:first-of-type {
+    left: 10px;
+}
+
+.slider_btn:last-of-type {
+    right: 10px;
+}
+
+.home_second_section {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.home_second_section h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+    color: #3b3f4a;
+    padding: 20px 0;
+}
+
+.home_second_section_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.service_item {
+    width: 440px;
+    height: 550px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.service_item img {
+    width: 100%;
+    height: 280px;
+    border-radius: 30px;
+    object-position: center;
+    object-fit: cover;
+}
+
+.service_item h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.service_item p {
+    font-weight: 300;
+    font-size: 14px;
+    color: #7c7c7c;
+    line-height: 1.4;
+}
+
+.service_button_container {
+    display: flex;
+    justify-content: center;
+}
+
+.service_item button {
+    width: 200px;
+    padding: 14px 0;
+    border-radius: 0px;
+    border: 0;
+    background-color: #3b3f4a;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.service_item button:hover {
+    background-color: #2c2f38;
+}
+
+.about_us_section {
+    width: 100%;
+    height: 400px;
+    background-color: #f9f9f9;
+}
+
+.about_us_section_container h3 {
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #3b3f4a;
+}
+
+.about_us_section_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0 50px;  
+}
+
+.about_us_section_content {
+    display: flex;
+    gap: 20px;
+}
+
+.about_us_section_content > div {
+    width: auto;
+    height: auto;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about_us_section_content > div h4 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 50px;
+}
+
+.about_us_section_content > div p {
+    font-weight: 300;
+    font-size: 14px;
+    color: #3e3e3e;
+    line-height: 1.4;
+}
+
+.teethGallery {
+    width: 100%;
+    height: 560px;
+    background-color: #f9f9f9;
+}
+
+.teethGallery h2 {
+    font-weight: 400;
+    font-size: 30px;
+    color: #3b3f4a;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 20%;
+}
+
+.teethGallery_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    gap: 20px;
+    height: 80%;
+}
+
+.teeth_item {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.teeth_item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 20px;
+}
+
+.teeth_item h3 {
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #3b3f4a;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.teeth_item h3 span {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #3b3f4a;
+}
+
+body {
+    position: relative;
+}
+
+.for_disabled_container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.for_disabled {
+    position: relative;
+    background-color: #222;
+    color: #fff;
+    padding: 20px 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.for_disabled:hover {
+    background-color: #444;
+}
+
+.disabled_container {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    right: 83px;
+    bottom: 21px;
+    z-index: 99;
+    background-color: #fff;
+    border: solid 1px #222; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.disabled_container h4 {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.disabled_container_content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.disabled_container_content p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.home_doctors_section {
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.home_doctors_section h2 {
+    font-weight: 400;
+    font-size: 30px;
+    color: #3b3f4a;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 20%;
+    padding-bottom: 20px;
+}
+
+.home_doctors_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+    padding: 0 40px;
+}
+
+.doctor_card {
+    width: 350px;
+    height: 620px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.doctor_card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.doctor_card h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #3b3f4a;
+    margin: 20px 0;
+}
+
+.doctor_specialty {
+    font-weight: 300;
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.doctor_description {
+    font-weight: 300;
+    font-size: 14px;
+    color: #3e3e3e;
+    line-height: 1.4;
+}
+
+.doctor_card button {
+    margin: 20px 0;
+    width: 200px;
+    padding: 13px 0;
+    border-radius: 0px;
+    border: 0;
+    background-color: #3b3f4a;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.doctor_card button:hover {
+    background-color: #2c2f38;
+}
+
+
+.doctor_button_container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media (min-width: 480px) {
+
+    .slider_content {
+        padding-left: 150px;
+    }
+
+    .slider_content h3 {
+        font-size: 1.5rem;
+    }
+
+    .slider_content h5 {
+        font-size: 0.7rem;
+        width: 200px;
+    }
+
+    .slider_content p {
+        font-size: 0.7rem;
+    }
+
+    .home_second_section, .teethGallery, .home_doctors_section, .about_us_section {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .home_second_section h2, .teethGallery h2, .home_doctors_section h2, .about_us_section h3 {
+        margin: 20px 0;
+    }
+
+    .home_second_section_container, .teethGallery_container, .home_doctors_container, .about_us_section_content {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .home_second_section h2 {
+        font-size: 1.3rem;
+    }
+
+    .doctor_card {
+        width: 420px;
+    }
+
+    .service_item {
+        width: 420px;
+    }
+    
+    .teeth_item {
+        width: 420px;
+        padding: 10px;
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    .slider_content {
+        padding-left: 200px;
+    }
+
+    .slider_content h3 {
+        font-size: 2.3rem;
+    }
+
+    .slider_content h5 {
+        font-size: 1rem;
+        width: 250px;
+    }
+
+    .slider_content p {
+        font-size: 1rem;
+    }
+
+    .home_second_section h2 {
+        font-size: 1.8rem;
+    }
+
+    .doctor_card {
+        width: 520px;
+    }
+
+    .service_item {
+        width: 520px;
+    }
+    
+    .teeth_item {
+        width: 520px;
+        padding: 10px;
+        margin: 0;
+    }
+    
+    .about_us_section_content > div {
+        width: 520px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .slider_content {
+        padding-left: 200px;
+    }
+
+    .slider_content h3 {
+        font-size: 3.3rem;
+    }
+
+    .slider_content h5 {
+        font-size: 1.3rem;
+        width: auto;
+    }
+
+    .slider_content p {
+        font-size: 1.2rem;
+    }
+    
+    .doctor_card {
+        width: 400px;
+    }
+
+    .service_item {
+        width: 420px;
+    }
+    
+    .teeth_item {
+        width: 400px;
+        padding: 10px;
+        margin: 0;
+    }
+    
+    .about_us_section_content > div {
+        width: 400px;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .slider_content {
+        padding-left: 200px;
+    }
+
+    .slider_content h3 {
+        font-size: 3.3rem;
+    }
+
+    .slider_content h5 {
+        font-size: 1.3rem;
+        width: auto;
+    }
+
+    .slider_content p {
+        font-size: 1.2rem;
+    }
+        
+    .doctor_card {
+        width: 450px;
+        height: auto;
+    }
+
+    .service_item {
+        width: 450px;
+    }
+    
+    .teeth_item {
+        width: 450px;
+        padding: 10px;
+        margin: 0;
+    }
+    
+    .about_us_section_content > div {
+        width: 450px;
+    }
+
+    .about_us_section, .home_doctors_section, .teethGallery, .home_second_section {
+        padding: 50px 0;
+    }
+}
+
+
+@media (min-width: 1390px) {
+
+    .slider_content {
+        padding-left: 230px;
+    }
+
+    .slider_content h3 {
+        font-size: 4rem;
+    }
+
+    .slider_content h5 {
+        font-size: 1.7rem;
+        width: auto;
+    }
+
+    .slider_content p {
+        font-size: 1.2rem;
+    }
+
+
+ 
+    .doctor_card {
+        width: 312px;
+        height: auto;
+    }
+
+    .service_item {
+        width: 420px;
+    }
+
+    .teethGallery_container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .teeth_item {
+        width: 300px;
+    }
+
+    .about_us_section_content {
+        display: flex;
+        gap: 30px;
+    }
+    
+    .about_us_section_content > div {
+        width: 410px;
+    }
+
+    .home_second_section_container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    .about_us_section_content > div, .service_item {
+        width: 450px;
+    }
+
+    .teeth_item {
+        width: 360px;
+    }
+
+    .doctor_card {
+        width: 365px;
+        height: auto;
+    }
+
+    .doctor_button_container {
+        margin-top: 15px;
+    }
+
+    .home_second_section_container, .teethGallery_container, .home_doctors_container, .about_us_section_content {
+        flex-wrap: nowrap;
+    }
+
+}
+
+
+
+@media (min-width: 480px) {
+    html[lang="ge"] .slider_content h3 {
+        font-size: 0.9rem;
+        font-weight: 600;
+        width: auto;
+    }
+
+    html[lang="ge"] .slider_content h5  {
+        font-size: 0.7rem;
+        font-weight: 300;
+    }
+}
+
+@media (min-width: 850px) {
+    html[lang="ge"] .slider_content h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        width: auto;
+
+    }
+
+    html[lang="ge"] .slider_content h5  {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+@media (min-width: 1200px) {
+    html[lang="ge"] .slider_content h3 {
+        font-size: 2rem;
+        font-weight: 600;
+        width: auto;
+
+    }
+
+    html[lang="ge"] .slider_content h5  {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+}
