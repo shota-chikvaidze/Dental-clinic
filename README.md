@@ -29,6 +29,3 @@ A modern, fully responsive **Dental Clinic management website** built with **Rea
 | Styling | CSS |
 | Backend | Node.js, Express |
 | Database | MongoDB
-
-   ```bash
-   git clone https://github.com/yourusername/Dental-Clinic.git
