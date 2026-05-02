@@ -42,7 +42,7 @@ export const Admin = () => {
       setUserCount(userRes.data.users);
       setAppointmentCount(appointmentRes.data.appointments);
       setContactCount(contactRes.data.contact);
-      
+
     } catch (err) {
       console.error('Error fetching stats:', err);
     }
@@ -85,7 +85,7 @@ export const Admin = () => {
 
       <div className="dashboardContainer">
         <div className="dashboardHeader">
-          <h1 className="dashboardTitle">Welcome, {username}</h1>
+          <h1 className="dashboardTitle"> Welcome </h1>
           <p className="dashboardSubtitle">Here is your latest dashboard summary</p>
         </div>
 

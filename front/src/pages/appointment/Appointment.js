@@ -137,23 +137,6 @@ export const Appointment = () => {
     '17:00',
   ];
 
-  const getService = async () => {
-
-    try{
-
-      const res = await axios.get('/service')
-      setService(res.data.getService)
-
-    }catch(err){
-      console.log('service error')
-    }
-
-  }
-
-  useEffect(() => {
-    getService();
-  }, []);
-
   const { t, i18n } = useTranslation();
 
 
