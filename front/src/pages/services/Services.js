@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
 import './Services.css'
 import ServiceData from '../../data/servicesData/ServicesData'
 import { Link } from 'react-router-dom'
@@ -15,7 +14,7 @@ export const Services = () => {
   return (
     <>
       <section className='services_main_section'>
-        <img src={servicesMainImg} />
+        <img src={servicesMainImg} alt='Service image' />
       </section>
       <section className='services_section'>
         <h1> {t("servicesTitle")} </h1>

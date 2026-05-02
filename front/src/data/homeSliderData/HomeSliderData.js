@@ -1,6 +1,5 @@
 import proccessDemtal from '../../assets/images/9d584216-8572-4006-8471-b61cbd15294b.png';
 import interior from '../../assets/images/interior.jpg';
-import GroupOfDoctors from '../../assets/images/groupOfDoctors.jpg';
 import building from '../../assets/images/building.jpg';
 
 const HomeSliderData = [

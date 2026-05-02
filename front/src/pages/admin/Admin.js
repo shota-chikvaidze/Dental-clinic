@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from '../../api/axios';
 import { Users, CalendarCheck, Mail, } from 'lucide-react';
 import './Admin.css';
-import AdminAppointments from '../../components/adminAppoinments/AdminAppointments';
-import AdminContact from '../../components/adminContact/AdminContact';
 import { Link } from 'react-router-dom';
 
 import AdminSideBar from '../../components/adminSideBar/AdminSideBar';
@@ -12,7 +10,6 @@ export const Admin = () => {
   const [userCount, setUserCount] = useState(0);
   const [appointmentCount, setAppointmentCount] = useState(0);
   const [contactCount, setContactCount] = useState(0);
-  const [username, setUsername] = useState('Admin');
 
   useEffect(() => {
     fetchStats();

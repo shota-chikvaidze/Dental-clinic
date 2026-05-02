@@ -16,7 +16,7 @@ const ServicesDetails = () => {
       <section className='service_details_sect'>
         <div className='service_details_container'>
           <div className='service_details_item'>
-              <img src={ServiceDetails.image} />
+              <img src={ServiceDetails.image} alt={ServiceDetails.name} />
               <div className='service_details_context'>
                 <h1> {t(ServiceDetails.name)} </h1>
                 <p> {t(ServiceDetails.longDescription)} </p>

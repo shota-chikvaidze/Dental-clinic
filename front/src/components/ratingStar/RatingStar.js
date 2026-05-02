@@ -90,7 +90,7 @@ const RatingStars = ({ productId }) => {
 
         try{
           const token = localStorage.getItem('token')
-          const res = await axios.post('/rating', {
+          await axios.post('/rating', {
             productId,
             userId,
             value: star,

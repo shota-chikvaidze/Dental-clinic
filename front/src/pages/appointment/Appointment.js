@@ -137,8 +137,6 @@ export const Appointment = () => {
     '17:00',
   ];
 
-  const [service, setService] = useState([])
-
   const getService = async () => {
 
     try{

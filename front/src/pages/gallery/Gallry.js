@@ -15,7 +15,7 @@ export const Gallry = () => {
     return (GalleryData).length
   }
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
 
   return (
@@ -25,7 +25,7 @@ export const Gallry = () => {
         <div className='gallery_container'>
             {GalleryData.slice(1, showMore).map((gallery, index) => (
                 <div key={index} className='gallery_item'>
-                    <img src={gallery.image} />
+                    <img src={gallery.image} alt='Gallery photo' />
                 </div>
             ))}
         </div>

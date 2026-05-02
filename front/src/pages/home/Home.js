@@ -22,15 +22,12 @@ export const Home = () => {
 
   const [slider, setSlider] = useState(0);
   const [disabled, setDisabled] = useState(false);
-  const [rateDoctor, setRateDoctor] = useState(false);
 
   const showDisabled = () => {
     setDisabled(true);
-    setRateDoctor(true)
   }
   const closeDisabled = () => {
     setDisabled(false);
-    setRateDoctor(false);
   }
 
 
@@ -50,7 +47,7 @@ export const Home = () => {
     }
   }
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <>

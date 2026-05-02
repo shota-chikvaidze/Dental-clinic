@@ -114,6 +114,11 @@ export const Contact = () => {
                 ></textarea>
               </span>
             </div>
+
+            {responseMessage && (
+              <p className="success_text">{responseMessage}</p>
+            )}
+
             <div className='contact_submit_btn'>
               <button type='submit'> {t("submitBtn")} </button>
             </div>

@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { isLoggedIn, logout } from '../auth'
 import { GrLanguage } from "react-icons/gr";
 
-import UkFlag from '../assets/images/download.jpg'
 import { PiSignIn } from "react-icons/pi";
 import { FiMenu } from "react-icons/fi";
 
