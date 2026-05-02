@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { MdErrorOutline } from "react-icons/md";
-import axios from "axios";
+import axios from "../../api/axios";
 import { jwtDecode } from "jwt-decode";
 import './RatingStar.css'
 import { useTranslation } from "react-i18next";
 import { FaCheckCircle } from 'react-icons/fa';
+
 
 const RatingStars = ({ productId }) => {
   const [selected, setSelected] = useState(0);
@@ -60,7 +61,7 @@ const RatingStars = ({ productId }) => {
       } else{
          const fetchUserRating = async () => {
            try{
-             const res = await axios.get('http://localhost:5000/api/rating/user', {
+             const res = await axios.get('/rating/user', {
               params: {userId, productId}
              })
              if(res.data?.value){
@@ -89,7 +90,7 @@ const RatingStars = ({ productId }) => {
 
         try{
           const token = localStorage.getItem('token')
-          const res = await axios.post('http://localhost:5000/api/rating', {
+          const res = await axios.post('/rating', {
             productId,
             userId,
             value: star,

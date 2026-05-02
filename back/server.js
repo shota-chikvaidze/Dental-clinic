@@ -35,8 +35,7 @@ app.use('/api/reset-password', resetPasswordRouter)
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(process.env.MONGODB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    
 }).then(() => {
     console.log("MongoDB Connected Well");
     app.listen(PORT, () => {

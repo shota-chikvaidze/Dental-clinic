@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../../api/axios'
 import React, { useState } from 'react'
 import AdminSideBar from '../adminSideBar/AdminSideBar';
 
@@ -20,7 +20,7 @@ const AdminDoctor = () => {
         try{
 
             const token = localStorage.getItem('adminToken')
-            const res = await axios.post('http://localhost:5000/api/doctor/post-doctor', doctorForm, {
+            const res = await axios.post('/doctor/post-doctor', doctorForm, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -39,8 +39,8 @@ const AdminDoctor = () => {
     <section className='admin_doctor'>
         <AdminSideBar />
         <form onSubmit={handlePost}>
-            <input name='name' type='text' placeholder='Doctor name' onChange={handleChange} required />
-            <input name='speciality' type='text' placeholder='Doctor speciality' onChange={handleChange} required />
+            <input name='name' type='text' placeholder='Doctor name' value={doctorForm.name} onChange={handleChange} required />
+            <input name='speciality' type='text' placeholder='Doctor speciality' value={doctorForm.speciality} onChange={handleChange} required />
             <button type='submit'>Post</button>
         </form>
     </section>

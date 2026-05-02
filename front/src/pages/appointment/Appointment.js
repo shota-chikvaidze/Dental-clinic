@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Appointment.css';
 import servicesData from '../../data/servicesData/ServicesData';
-import axios from 'axios';
+import axios from '../../api/axios';
 import { MdErrorOutline } from "react-icons/md";
 import { useTranslation } from 'react-i18next';
 import { FaCheckCircle } from 'react-icons/fa';
@@ -48,7 +48,7 @@ export const Appointment = () => {
   useEffect(() => {
     const fetchBookedSlots = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/appointments/booked-slots');
+        const res = await axios.get('/appointments/booked-slots');
         setBookedSlots(res.data.bookings);
         console.log('Booked slots:', res.data.bookings);
       } catch (err) {
@@ -77,7 +77,7 @@ export const Appointment = () => {
       const token = localStorage.getItem('token');
 
       const res = await axios.post(
-        'http://localhost:5000/api/appointments/book',
+        '/appointments/book',
         formData,
         {
           headers: {
@@ -113,8 +113,9 @@ export const Appointment = () => {
   const getDoctor = async () => {
     try{
 
-      const res = await axios.get('http://localhost:5000/api/doctor/get-doctor')
+      const res = await axios.get('/doctor/get-doctor')
       setDoctors(res.data)
+      
     }catch(err){
       console.log('doctor error')
     }
@@ -142,8 +143,7 @@ export const Appointment = () => {
 
     try{
 
-      const res = await axios.get('http://localhost:5000/api/service')
-      console.log('SERVICE RESPONSE:', res.data);
+      const res = await axios.get('/service')
       setService(res.data.getService)
 
     }catch(err){
@@ -221,7 +221,7 @@ export const Appointment = () => {
                 }}
               />
 
-              <select name="doctor" onChange={handleChange} required className='doctor_input'>
+              <select name="doctor" value={formData.doctor} onChange={handleChange} required className='doctor_input'>
                 <option value="">Choose a doctor</option>
                 {doctors.map(doc => (
                   <option key={doc._id} value={doc.name}>

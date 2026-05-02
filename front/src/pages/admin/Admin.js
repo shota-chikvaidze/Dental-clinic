@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from '../../api/axios';
 import { Users, CalendarCheck, Mail, } from 'lucide-react';
 import './Admin.css';
 import AdminAppointments from '../../components/adminAppoinments/AdminAppointments';
@@ -23,19 +23,19 @@ export const Admin = () => {
       const token = localStorage.getItem('adminToken');
       const [userRes, appointmentRes, contactRes] = await Promise.all([
         axios.get(
-          'http://localhost:5000/api/admin/dashboard/userStats',
+          '/admin/dashboard/userStats',
           {
             headers: { Authorization: `Bearer ${token}` },
           }
         ),
         axios.get(
-          'http://localhost:5000/api/admin/dashboard/appointment',
+          '/admin/dashboard/appointment',
           {
             headers: { Authorization: `Bearer ${token}` },
           }
         ),
         axios.get(
-          'http://localhost:5000/api/admin/dashboard/contact',
+          '/admin/dashboard/contact',
           {
             headers: { Authorization: `Bearer ${token}` }, 
           }
@@ -45,6 +45,7 @@ export const Admin = () => {
       setUserCount(userRes.data.users);
       setAppointmentCount(appointmentRes.data.appointments);
       setContactCount(contactRes.data.contact);
+      
     } catch (err) {
       console.error('Error fetching stats:', err);
     }

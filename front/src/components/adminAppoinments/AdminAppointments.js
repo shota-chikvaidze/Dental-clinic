@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './AdminAppoiment.css';
 import AdminSideBar from '../adminSideBar/AdminSideBar';
-import axios from 'axios';
+import axios from '../../api/axios';
 
 const AdminAppointments = () => {
   const [appointments, setAppointments] = useState([]);
@@ -14,7 +14,7 @@ const AdminAppointments = () => {
     try {
       const token = localStorage.getItem('adminToken');
       const res = await axios.get(
-        'http://localhost:5000/api/admin/dashboard/getAppointment',
+        '/admin/dashboard/getAppointment',
         {
           headers: { Authorization: `Bearer ${token}` },
         }

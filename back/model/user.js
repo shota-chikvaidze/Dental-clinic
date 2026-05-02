@@ -9,7 +9,9 @@ const userSchema = new mongodb.Schema({
     phone: {type: String, required: true},
     email: {type: String, required: true, unique: true},
     resetToken: {type: String},
-    resetTokenExpire: {type: Date}
+    resetTokenExpire: {type: Date},
+
+    role: { type: String, default: 'USER', enum: ['USER', 'ADMIN'] }
 })
 
 module.exports = mongodb.model("User", userSchema)

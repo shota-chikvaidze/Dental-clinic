@@ -2,21 +2,42 @@ const booking = require('../model/booking')
 const User = require('../model/user')
 const Contact = require('../model/contact')
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 
 
-exports.loginAdmin = (req, res) => {
-  const { username, password } = req.body;
+exports.loginAdmin = async (req, res) => {
+  try{
 
-  if (username === 'admin' && password === 'admin123') {
+    const { username, password } = req.body;
+    if(!username || !password) {
+      return res.status(400).json({message: 'all fields required'})
+    }
+
+    const user = await User.findOne({ username, role: "ADMIN" })
+    if(!user) {
+      return res.status(404).json({message: 'user not found'})
+    }
+
+    const compare = await bcrypt.compare(password, user.password)
+    if(!compare) {
+      return res.status(400).json({message: 'password incorrect'})
+    }
+
     const token = jwt.sign(
-      { username, role: 'admin' },
+      { 
+        id: user._id,
+        role: user.role 
+      },
       process.env.JWT,
-      { expiresIn: '1h' }
+      { expiresIn: '2d' }
     );
-    return res.json({ token });
-  } else {
-    return res.status(401).json({ message: 'Invalid admin credentials' });
+
+    res.status(200).json({message: 'logged in', token})
+
+  }catch(err){
+    res.status(500).json({ message: "Server error" });
   }
+
 };
 
 

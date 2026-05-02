@@ -7,7 +7,7 @@ import { FaLocationDot, FaPhone, FaFacebookF, FaTwitter, FaInstagram } from "rea
 import { MdOutlineMail } from "react-icons/md";
 import { FaCheckCircle } from 'react-icons/fa';
 import { MdErrorOutline } from "react-icons/md";
-import axios from 'axios';
+import axios from '../../api/axios';
 
 export const Contact = () => {
 
@@ -51,7 +51,7 @@ export const Contact = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token')
-      const res = await axios.post('http://localhost:5000/api/userContact/contact', formData, {
+      const res = await axios.post('/userContact/contact', formData, {
         headers: {
           Authorization: `Bearer ${token}`
         }

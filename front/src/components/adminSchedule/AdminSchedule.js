@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from '../../api/axios';
 import AdminSideBar from '../adminSideBar/AdminSideBar';
 import './AdminSchedule.css';
 
@@ -10,7 +10,7 @@ const AdminSchedule = () => {
     const fetchSchedule = async () => {
       try {
         const token = localStorage.getItem('adminToken'); 
-        const res = await axios.get('http://localhost:5000/api/admin/dashboard/getAppointment', {
+        const res = await axios.get('/admin/dashboard/getAppointment', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

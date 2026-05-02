@@ -12,10 +12,6 @@ export const Services = () => {
 
   const { t } = useTranslation();
 
-  const fetchServices = async (params) => {
-    
-  }
-
   return (
     <>
       <section className='services_main_section'>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './AdminSideBar.css'
-import axios from 'axios'
+import axios from '../../api/axios'
 
 const AdminSideBar = () => {
 
@@ -14,7 +14,7 @@ const AdminSideBar = () => {
         const token = localStorage.getItem('adminToken')
         const [contactRes, appointmentRes] = await Promise.all([
           axios.get(
-            "http://localhost:5000/api/admin/dashboard/contact",
+            "/admin/dashboard/contact",
 
             {
               headers: { Authorization: `Bearer ${token}` }, 
@@ -23,7 +23,7 @@ const AdminSideBar = () => {
           ),
           
           axios.get(
-            "http://localhost:5000/api/admin/dashboard/appointment",
+            "/admin/dashboard/appointment",
 
             {
               headers: { Authorization: `Bearer ${token}` }, 

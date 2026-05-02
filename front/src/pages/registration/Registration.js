@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import axios from '../../api/axios'
 import './Registration.css'
 import { useTranslation } from 'react-i18next';
 
@@ -56,7 +56,7 @@ export const Registration = () => {
     e.preventDefault(); 
 
     try {
-      const res = await axios.post("http://localhost:5000/api/users/register", form);
+      const res = await axios.post("/users/register", form);
       
       
       if(res) {
@@ -88,9 +88,6 @@ export const Registration = () => {
             <div className='signin_cotext_side_button'>
               <Link to='/login' ><button> {t("login")} </button></Link>
             </div>
-            <div className='signin_cotext_side_button'>
-              <Link to='/admin-login' ><button> {t("forAdmin")} </button></Link>
-            </div>  
           </div>
 
           <div className='signin_form_side'>

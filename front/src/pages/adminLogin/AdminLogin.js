@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './AdminLogin.css'
-import axios from 'axios';
+import axios from '../../api/axios';
 
 const AdminLogin = () => {
   const [formData, setFormData] = useState({ username: '', password: '' });
@@ -13,7 +13,7 @@ const AdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/admin/login', formData);
+      const res = await axios.post('/admin/login', formData);
       localStorage.setItem('adminToken', res.data.token);
       window.location.href = '/admin/dashboard';
     } catch (err) {
